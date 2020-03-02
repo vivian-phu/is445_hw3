@@ -9,24 +9,26 @@ var endNum = parseInt(end);
 var stepNum = parseInt(step);
 
 var genArray = [];
+var sumNum = 0;
 
 function getArray(){
     var arrayNum = startNum
+    sumNum = startNum;
     genArray.push(startNum);
+
+    // if the step is positive
     if (stepNum >= 0) {
         for (i = startNum; i >= startNum && i< endNum; i++){
             arrayNum = arrayNum + stepNum;
             genArray.push(arrayNum);
+            sumNum = sumNum + arrayNum;
         }
     }
+    //if the step is negative
 }
 
 getArray();
 
-console.log(genArray);
+document.getElementById("array").innerHTML = "The generated array is " + genArray;
+document.getElementById("sum").innerHTML = "The generated sum is " + sumNum;
 
-var genStr = genArray.toString();
-
-console.log(genStr);
-
-document.getElementById("array").innerHTML = "me";
