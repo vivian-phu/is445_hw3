@@ -1,16 +1,14 @@
-// JavaScript source code
-
 var genArray = [];
 var sumNum = 0;
 var binaryArray = [];
 
 function getArray(){
+
 	while (isNaN(start)) {
 		var start = prompt("Enter the start:");
 		var startNum = parseInt(start);
 		if (isNaN(start)==true){
 			document.getElementById("array").innerHTML = "Invalid integer input, please reload and try again.";
-			break;
 		}
 	}
 
@@ -19,7 +17,6 @@ function getArray(){
 		var endNum = parseInt(end);
 		if (isNaN(end)==true){
 			document.getElementById("array").innerHTML = "Invalid integer input, please reload and try again.";
-			break;
 		}
 	}
 
@@ -28,7 +25,6 @@ function getArray(){
 		var stepNum = parseInt(step);
 		if (isNaN(step)==true){
 			document.getElementById("array").innerHTML = "Invalid integer input, please reload and try again.";
-			break;
 		}
 	}
     var arrayNum = startNum;
