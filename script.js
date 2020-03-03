@@ -4,29 +4,29 @@ var binaryArray = [];
 
 function getArray(){
 
-	while (isNaN(start)) {
-		var start = prompt("Enter the start:");
-		var startNum = parseInt(start);
-		if (isNaN(start)==true){
-			document.getElementById("array").innerHTML = "Invalid integer input, please reload and try again.";
-		}
+	//while (isNaN(start)) {
+	var start = prompt("Enter the start:");
+	var startNum = parseInt(start);
+	if (isNaN(start)==true){
+		document.getElementById("array").innerHTML = "Invalid integer input, please reload and try again.";
 	}
+	//}
 
-	while (isNaN(end)) {
-		var end = prompt("Enter the end:");
-		var endNum = parseInt(end);
-		if (isNaN(end)==true){
-			document.getElementById("array").innerHTML = "Invalid integer input, please reload and try again.";
-		}
+	//while (isNaN(end)) {
+	var end = prompt("Enter the end:");
+	var endNum = parseInt(end);
+	if (isNaN(end)==true){
+		document.getElementById("array").innerHTML = "Invalid integer input, please reload and try again.";
 	}
+	//}
 
-	while (isNaN(step)) {
-		var step = prompt("Enter the step:");
-		var stepNum = parseInt(step);
-		if (isNaN(step)==true){
-			document.getElementById("array").innerHTML = "Invalid integer input, please reload and try again.";
-		}
+	//while (isNaN(step)) {
+	var step = prompt("Enter the step:");
+	var stepNum = parseInt(step);
+	if (isNaN(step)==true){
+		document.getElementById("array").innerHTML = "Invalid integer input, please reload and try again.";
 	}
+	//}
     var arrayNum = startNum;
 	var binaryNum = startNum.toString(2);
     sumNum = startNum;
@@ -59,9 +59,11 @@ function getArray(){
             i=i+stepNum
         }
     }
-	document.getElementById("array").innerHTML = "The generated array is " + genArray;
-	document.getElementById("sum").innerHTML = "The generated sum is " + sumNum;
-	document.getElementById("binary").innerHTML = "The binary of absolut element values are:" + binaryArray;
+	if (isNaN(start)==false && isNaN(end)==false && isNaN(step)==false){
+		document.getElementById("array").innerHTML = "The generated array is " + genArray;
+		document.getElementById("sum").innerHTML = "The generated sum is " + sumNum;
+		document.getElementById("binary").innerHTML = "The binary of absolut element values are:" + binaryArray;
+	}
 
 }
 
